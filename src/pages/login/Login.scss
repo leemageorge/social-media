@@ -1,9 +1,21 @@
+@import "../../style.scss";
+
 .login{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #dbd6f5;
+
+
+    @include mobile{
+        flex-direction: column;
+        width: 100%;
+    }
+    @include tablet{
+        flex-direction: column;
+        width: 100%;
+    }
     .card{
         width: 50%;
         display: flex;
@@ -11,7 +23,18 @@
         border-radius: 10px;
         min-height: 600px;
         overflow: hidden;
-        .left{
+
+        @include mobile{
+            flex-direction: column;
+            width: 100%;
+     
+  
+        }
+        @include tablet{
+            flex-direction: column;
+            width: 100%;
+        }
+    .left{
             display: flex;
             flex-direction: column;
             gap: 3rem;
@@ -21,18 +44,36 @@
             padding: 3rem;
             color: white;
             gap: 3rem;
+
+            @include mobile{
+               gap: 1rem;
+               padding: 2rem;
+      
+            }
+            @include tablet{
+                gap: 3rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
             h1{
                 font-size: 4rem;
-                line-height: 4rem;
-                
+                line-height: 4rem; 
+
+                @include mobile{
+                    font-size: 2rem;
+                    line-height: 2rem;
+          
+                }
             }
             p{
                 text-align: justify;
+            
+       
             }
             span{
                 font-size: 1.2rem;
-
-            }
+                }
             button{
 
                 width: 50%;
@@ -52,16 +93,47 @@
             padding: 3rem;
             gap: 3rem;
 
+            @include mobile{
+                gap: 1rem;
+                padding: 2rem;
+       
+             }
+             @include tablet{
+                 gap: 3rem;
+                 background-repeat: no-repeat;
+                 background-size: cover;
+             }
+
+            h1{
+                font-size: 2rem;
+
+            }
+
+
+
             form{
                 display: flex;
                 flex-direction: column;
                 gap: 3rem;
+
+                @include mobile{
+                    gap: 1rem;
+           
+                 }
+                 @include tablet{
+                     gap: 3rem;
+                   
+                 }
+            
 
                 input{
                     border: none;
                     border-bottom: 1px solid lightgray;
                     padding: 1rem 0.5rem;
                     outline: none;
+                    
+          
+                    
                 }
                 button{
                     width: 50%;
@@ -72,6 +144,7 @@
                     font-weight: bold;
                     border-radius: 0.8rem;
                     cursor: pointer;
+
 
                 }
             }
